@@ -35,13 +35,12 @@ title: Home
 {% endif %}
 {% endunless %}
 
-  <article>
-  	<h2>{{ post.date | date: '%Y' }}</h2>
-    <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>
-    <div class="post-date">
-      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B" }}</time>
-    </div>
-  </article>
+ <!--  <article>
+   <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>
+   <div class="post-date">
+     <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B" }}</time>
+   </div>
+ </article> -->
 
   {% if forloop.last %}
     </div>
