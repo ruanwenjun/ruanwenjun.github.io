@@ -1,0 +1,18 @@
+title: Brume
+author: Aigars Dzerviniks
+description: It's simple. It's easy to use. It's a Jekyll theme.
+
+highlighter: null
+permalink: /:title
+
+url:
+baseurl:
+
+# 分页 
+paginate: 10
+paginate_path: "page:num"
+
+baidu_tongji_id: c1b59fdd06598101f6a058d92fe41554
+# Custom options:
+# color_scheme: azul|ruby|amber|avocado
+# color_scheme: avocado
