@@ -1,6 +1,6 @@
 # My Blog:sparkling_heart:
 
-是一个很简单的blog，也是fork别人的,基本只是改变了一点,[点击查看](http://ruanwenjun.github.io)
+是一个很简单的blog,[点击查看](http://ruanwenjun.github.io)
 
 ---
 ## 如果你喜欢可以直接fork之后修改使用，使用方法如下
