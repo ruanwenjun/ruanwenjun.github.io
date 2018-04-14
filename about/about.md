@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About
+permalink: /about/
 ---
 
 # 有趣的灵魂千篇一律，好看的皮囊就我一个！！！
