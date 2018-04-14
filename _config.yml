@@ -9,7 +9,7 @@ url:
 baseurl:
 
 # 分页 
-paginate: 6
+paginate: 8
 paginate_path: "page:num"
 
 baidu_tongji_id: c1b59fdd06598101f6a058d92fe41554
