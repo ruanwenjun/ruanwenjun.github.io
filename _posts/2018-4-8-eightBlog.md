@@ -42,7 +42,8 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="cn.ruanwenjun.mapper"  targetProject="mybatis-generator\src">
+    <sqlMapGenerator targetPackage="cn.ruanwenjun.mapper"  
+    	targetProject="mybatis-generator\src">
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
 	<!--这里type也是指定的名称，具体看文档  -->

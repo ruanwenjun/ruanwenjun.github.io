@@ -30,25 +30,25 @@ title: springmvc文件上传、异常处理器!
 
 ```java
 //更新一个商品
-	@RequestMapping("updateitem.action")
-	public ModelAndView itemUpdate(Items item,MultipartFile pictureFile)
-	    throws IllegalStateException, IOException {
-	    //获得文件名
-		String name = pictureFile.getOriginalFilename();
-		//获得文件扩展名
-		String extension = FilenameUtils.getExtension(name);
-		//创建文件名称
-		name = UUID.randomUUID().toString().replaceAll("-", "")+"."+extension;
-		//将文件复制到电脑
-		pictureFile.transferTo(new File("E:\\ecplices _workspace\\"
-		    +"simplework\\ssm\\upload\\"+name));
-		    
-		item.setPic(name);
-		is.itemUpdate(item);
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("success");
-		return mav; 
-	}
+@RequestMapping("updateitem.action")
+public ModelAndView itemUpdate(Items item,MultipartFile pictureFile)
+    throws IllegalStateException, IOException {
+    //获得文件名
+	String name = pictureFile.getOriginalFilename();
+	//获得文件扩展名
+	String extension = FilenameUtils.getExtension(name);
+	//创建文件名称
+	name = UUID.randomUUID().toString().replaceAll("-", "")+"."+extension;
+	//将文件复制到电脑
+	pictureFile.transferTo(new File("E:\\ecplices _workspace\\"
+	    +"simplework\\ssm\\upload\\"+name));
+	    
+	item.setPic(name);
+	is.itemUpdate(item);
+	ModelAndView mav = new ModelAndView();
+	mav.setViewName("success");
+	return mav; 
+}
 ```
 
 ---

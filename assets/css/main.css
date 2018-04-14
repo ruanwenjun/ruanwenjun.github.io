@@ -289,7 +289,7 @@ footer {
 */
 .highlight {
 	overflow: auto;
-  padding: 30px;
+  padding: 8px;
   border-radius: 6px;
   background-color: #272822;
   color: #f8f8f2;
