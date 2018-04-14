@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-# 有趣的灵魂千篇一律，好看的皮囊就我一个！！！
+
 
 ### More Information
 
@@ -17,5 +17,4 @@ permalink: /about/
 ### Contact me
 
 - 邮箱：[861923274@qq.com](mailto:861923274@qq.com)
-- 歌单：<a href="http://music.163.com/m/playlist?id=566105598&userid=398548615">网易云歌单</a>
 - 微博：<a href="https://weibo.com/2885734002/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1">新浪微博</a>
