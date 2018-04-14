@@ -33,6 +33,15 @@ title: Home
     <div>
 
 {% endif %}
+	{% unless forloop.first %}
+    </div>
+  	</div>
+  	{% endunless %}
+
+  	<div class="archive-item fadeInDown animated">
+    	<h2></h2>
+    <div>
+
 {% endunless %}
 
  <article>
