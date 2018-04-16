@@ -79,27 +79,32 @@
 
       $('#weixincode').on('click', function(){
 	    	layer.open({
-	    		title:"微信:rwj861923274",
-	     	 	type: 1,
-	      		area: ['290px', '334px'],
-	      		shadeClose: true, //点击遮罩关闭
-	      		content: '\<\div style="padding:20px;"><img style="width: 250px;" src="/images/weixincode.png"/>\<\/div>'
+	    		type: 1,
+				  title: false,
+				  closeBtn: 0,
+				  area: '516px',
+				  skin: 'layui-layer-nobg', //没有背景色
+				  shadeClose: true,
+				  content: '/images/weixincode.png'
 	    	});
   		});
 
        $('#qqcode').on('click', function(){
 	    	layer.open({
-	    		title:"QQ:861923274",
-	     	 	type: 1,
-	      		area: ['290px', '334px'],
-	      		shadeClose: true, //点击遮罩关闭
-	      		content: '\<\div style="padding:20px;"><img style="width: 250px; " src="/images/qqcode.jpg" />\<\/div>'
+	    		type: 1,
+				  title: false,
+				  closeBtn: 0,
+				  area: '516px',
+				  skin: 'layui-layer-nobg', //没有背景色
+				  shadeClose: true,
+				  content: '/images/qqcode.jpg'
+	      		
 	    	});
   		});
 
        $('#paycode').on('click', function(){
 	    	layer.open({
-	    		title:"感谢您的打赏!!",
+	    		title:['感谢您的打赏!!','font-size:20px;text-align:center;color:red'],
 	     	 	type: 1,
 	      		area: ['290px', '334px'],
 	      		shadeClose: true, //点击遮罩关闭
