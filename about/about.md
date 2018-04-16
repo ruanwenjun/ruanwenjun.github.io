@@ -17,4 +17,4 @@ permalink: /about/
 ### Contact me
 
 - 邮箱：[861923274@qq.com](mailto:861923274@qq.com)
-- 微博：<a href="https://weibo.com/2885734002/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1">新浪微博</a>
+- CSDN：<a href="https://blog.csdn.net/ruanwenjun_csdn">CSDN</a>
