@@ -16,7 +16,7 @@
 10. 加入了分页功能，可以修改**_config.yml** 里的分页数量。
 11. 点击按钮弹出图片功能使用的是layer这个插件，[API文档](http://www.layui.com/doc/modules/layer.html#content)。
 12. 如果没有域名，需要删掉CNAME这个文件，那么默认域名就是`你的github名字.github.io`，如果有域名则将CNAME里的内容改为你的域名。
-
+13. 添加音乐播放器，使用的是[autio.js](http://kolber.github.io/audiojs/)
 
 
 ---
