@@ -82,10 +82,11 @@
 	    		type: 1,
 				  title: false,
 				  closeBtn: 0,
-				  area: '300px',
+				  maxWidth:`300px`,
 				  skin: 'layui-layer-nobg', //没有背景色
 				  shadeClose: true,
-				  content: '<img style="width:300px;"src="/images/weixincode.png"/>'
+				  content: '<img style="width:300px;"src="/images/weixincode.png"/>',
+				  offset: '300px'
 	    	});
   		});
 
@@ -94,10 +95,11 @@
 	    		type: 1,
 				  title: false,
 				  closeBtn: 0,
-				  area: '300px',
+				  maxWidth:`300px`,
 				  skin: 'layui-layer-nobg', //没有背景色
 				  shadeClose: true,
-				  content: ' <img style="width:300px;"src="/images/qqcode.jpg"/>'
+				  content: ' <img style="width:300px;"src="/images/qqcode.jpg"/>',
+				  offset: '300px'
 	      		
 	    	});
   		});
@@ -106,9 +108,11 @@
 	    	layer.open({
 	    		title:false,
 	     	 	type: 1,
-	      		/*area: ['290px', '334px'],*/
+	      		maxWidth:`300px`,
+	      		skin: 'layui-layer-nobg',
 	      		shadeClose: true, //点击遮罩关闭
-	      		content: '<img style="width: 250px; " src="/images/alipay.jpg" /><img style="width: 250px; " src="/images/weixinpay.png" />'
+	      		content: '<img style="width: 250px; " src="/images/alipay.jpg" /><img style="width: 250px; " src="/images/weixinpay.png" />',
+	      		offset: '300px'
 	    	});
   		});
 
