@@ -2,5 +2,5 @@
   title: Home
 - url: /about/
   title: About
-url: /_layout/music.html
+- url: /_layout/music.html
   title: Music
