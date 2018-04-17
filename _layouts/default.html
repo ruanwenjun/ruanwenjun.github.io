@@ -35,11 +35,7 @@
       {{ content }}
 		
       <footer>
-      	 <div>
-      	 	<a id="paycode" >
-            	<img src="/images/pay.png" style="cursor: pointer;height: 68px;" />
-        	</a>
-      	 </div> 
+      	 
         <a href="https://weibo.com/u/2885734002">
       		  <img src="/images/weibo.png" style="width: 40px;height: 40px;"/>
     	  </a>
@@ -104,18 +100,7 @@
 	    	});
   		});
 
-       $('#paycode').on('click', function(){
-	    	layer.open({
-	    		title:false,
-	     	 	type: 1,
-	      		maxWidth:`300px`,
-	      		skin: 'layui-layer-nobg',
-	      		shadeClose: true, //点击遮罩关闭
-	      		content: '<img style="width: 150px; " src="/images/alipay.jpg" /><img style="width: 150px; " src="/images/weixinpay.png" />',
-	      		offset: '150px'
-	    	});
-  		});
-
+      
     </script>
   </body>
 </html>
