@@ -35,7 +35,9 @@
       {{ content }}
 		
       <footer>
-      	 
+      	 <div>
+      	 	<audio src="/mp3/tmz.mp3" preload="auto" />
+      	 </div>
         <a href="https://weibo.com/u/2885734002">
       		  <img src="/images/weibo.png" style="width: 40px;height: 40px;"/>
     	  </a>
@@ -67,6 +69,8 @@
     <script src="{{ '/assets/js/fluidvids.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/jquery-1.8.0.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/layer/layer.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/audio.min.js' | relative_url }}"></script>
+
     <script>
       fluidvids.init({
         selector: ['iframe', 'object'],
@@ -100,6 +104,9 @@
 	    	});
   		});
 
+	  audiojs.events.ready(function() {
+	    var as = audiojs.createAll();
+	  });
       
     </script>
   </body>
