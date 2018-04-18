@@ -3,9 +3,9 @@ layout: post
 title: Mybatis的初步学习!
 ---
 * [入门案例](#入门案例)
-* [SqlSessionFactory](#SqlSessionFactory)
-* [sqlSession](#sqlSession)
-* [SQL语句映射文件](#SQL语句映射文件)
+* [SqlSessionFactory](#sqlsessionfactory)
+* [sqlSession](#sqlsession)
+* [SQL语句映射文件](#sql语句映射文件)
 * [作用域和生命周期](#作用域和生命周期)
 
 # Mybatis是一款优秀的持久层框架
