@@ -19,6 +19,8 @@
 13. 添加音乐播放器，使用的是[autio.js](http://kolber.github.io/audiojs/)
 
 
+最后感谢[原作者](https://github.com/aigarsdz/brume)提供的模板
+
 ---
 # 有什么好的想法欢迎一起探讨！！
 
