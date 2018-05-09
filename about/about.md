@@ -1,12 +1,12 @@
 ---
 layout: post
-title: About
+title: 
 permalink: /about/
 ---
 
 
 
-### More Information
+### 基本信息
 
 本科就读于<a   href="http://www.hubu.edu.cn/">湖北大学</a>生命科学学院生物技术专业，大一的时候曾经手刃小白鼠，后来不忍继续杀生，于是转行学习CS
 
@@ -33,7 +33,7 @@ permalink: /about/
 
 在大三的时候成功书写第一条Helloworld,运行过程中出现死循环导致电脑死机，以一人之力成功将电脑重新开机。此项目耗时30minutes
 
-### Contact me
+### 联系方式
 
 - 邮箱：[861923274@qq.com](mailto:861923274@qq.com)
 - 微信：rwj861923274
