@@ -21,11 +21,13 @@ permalink: /about/
 - 认识TCP/IP这几个英文字母
 - 知道线程、进程是计算机里的东西
 - 知道不用鼠标怎么复制粘贴
+- 知道HTML != How To Make Love
 - 能闭着眼睛拼写出SpringMVC、Spring、Mybatis、Hibernate这几个单词
 - 知道常见的设计模式是23种而不是22种
 - 能够熟练的使用算法在2S的时间内将10张人民币排序
 - 知道Linux是一个操作系统的名字，而并不是一种编程语言
 - 知道JVM的GC是一个很复杂的过程
+- 知道懂nginx、zookeper、dubbo、分布式、高并发、负载均衡等一系列的技能都是很牛逼的
 
 ### 项目经历
 
