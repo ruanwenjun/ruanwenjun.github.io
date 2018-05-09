@@ -1,12 +1,11 @@
 ---
 layout: post
-title: About
+title: 基本信息
 permalink: /about/
 ---
 
 
 
-### 基本信息
 
 本科就读于<a   href="http://www.hubu.edu.cn/">湖北大学</a>生命科学学院生物技术专业，大一的时候曾经手刃小白鼠，后来不忍继续杀生，于是转行学习CS
 
