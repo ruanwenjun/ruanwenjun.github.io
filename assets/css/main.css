@@ -39,6 +39,9 @@ blockquote {
 ul, ol {
   margin-left: 40px;
 }
+li {
+  margin-bottom: 10px;
+}
 
 img {
   max-width: 100%;
