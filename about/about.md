@@ -1,6 +1,5 @@
 ---
 layout: post
-title: 基本信息
 permalink: /about/
 ---
 
