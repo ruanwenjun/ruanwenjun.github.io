@@ -35,5 +35,5 @@ permalink: /about/
 ### 联系方式
 
 - 邮箱：[861923274@qq.com](mailto:861923274@qq.com)
-- 微信：rwj861923274
+- 微信：<a id="weixincode">rwj861923274 </a>
 - CSDN：<a href="https://blog.csdn.net/ruanwenjun_csdn">CSDN</a>
