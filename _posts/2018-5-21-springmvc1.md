@@ -103,7 +103,7 @@ SpringMVC基于模型-视图-控制器模式实现，能够构建松耦合的Web
 </beans>
 ```
 (4) 书写Controller控制器
-```
+```java
 /**
  * @Author RUANWENJUN
  * @Creat 2018-05-19 15:10
