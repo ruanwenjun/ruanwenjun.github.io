@@ -51,7 +51,6 @@ title: Home
 			index=str.indexOf('>',index)+1;						//indexOf 返回'>'首次出现的位置  并且从index处开始检索
 		}else{
 			index++;											//index每70ms加一
-			sc = sc + 10;
 		}
 		$text.html(str.substring(0,index)+(index & 1 ?'_':''));	//substring 截取0到index的字符
 		if(index >= str.length){
