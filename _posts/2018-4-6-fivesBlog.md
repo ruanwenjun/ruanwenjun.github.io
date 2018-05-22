@@ -94,7 +94,6 @@ public class SF{
                     sf = new SF();
                 }
             }
-            sf = new SF();
         }
         return sf;
     }
