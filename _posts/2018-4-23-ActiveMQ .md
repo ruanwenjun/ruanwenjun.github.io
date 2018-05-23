@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ActiveMQ入门学习!
+title: ActiveMQ入门学习
 ---
 
 目录：
