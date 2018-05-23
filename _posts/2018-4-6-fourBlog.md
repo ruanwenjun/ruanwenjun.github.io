@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mybatis的初步学习!
+title: Mybatis的初步学习
 ---
 * [入门案例](#入门案例)
 * [SqlSessionFactory](#sqlsessionfactory)

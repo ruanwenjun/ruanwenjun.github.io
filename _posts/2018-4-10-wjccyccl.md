@@ -1,6 +1,6 @@
 ---
 layout: post
-title: springmvc文件上传、异常处理器!
+title: springmvc文件上传、异常处理器
 ---
 * [图片长传](#图片长传)
 * [异常处理器](#异常处理器)

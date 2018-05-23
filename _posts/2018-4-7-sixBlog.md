@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring简单整合Mybatis!
+title: Spring简单整合Mybatis
 ---
 * [导包](#导包)
 * [spring配置文件](#spring配置文件)

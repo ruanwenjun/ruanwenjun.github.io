@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mybatis-generator生成器初步学习!
+title: Mybatis-generator生成器初步学习
 ---
 mybatis-generator是Mybatis的一款生成代码的工具，利用他可以自动将数据库中的表生成对应的实体model,接口mapper和sqlmapper,免去开发过程中的一些重复而繁杂的工作。
 # 在Ecplise中使用
