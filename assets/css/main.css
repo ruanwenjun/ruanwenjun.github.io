@@ -134,7 +134,7 @@ dd {
 }
 
 .avocado a {
-  color: #568203;
+  color: #930036;
 }
 
 .avocado a:hover {
@@ -234,8 +234,8 @@ footer {
 
 .archive-item {
   border-top: 1px solid #333;
-  padding-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 5px;
+  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -8,7 +8,8 @@ title: springmvc文件上传、异常处理器
 ## 图片上传
 
 (1) StandardServletMultipartResolver(推荐使用)
-1. 需要在web.xml的前端控制器中配置临时文件的路径，同时还可以配置上传大小之类的
+1.需要在web.xml的前端控制器中配置临时文件的路径，同时还可以配置上传大小之类的
+
 ```
 <servlet>
     <servlet-name>mvc</servlet-name>
@@ -28,13 +29,15 @@ title: springmvc文件上传、异常处理器
 </servlet-mapping>
 ```
 
-2. 在springmvc.xml中配置解析器
+2.在springmvc.xml中配置解析器
+
 ```
 <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
 ```
+
 同样，这里的id不能改
 
-3. 然后就可以在控制器中接收文件
+3.然后就可以在控制器中接收文件
 ```java
 @RequestMapping(value = "/spittle/register", method = RequestMethod.POST)
     public String register(@RequestPart("profilePicture") MultipartFile multipartFile,
@@ -48,10 +51,10 @@ title: springmvc文件上传、异常处理器
 
 (2) 使用CommonsMultipartResolver
 
-1. 导入额外的包
+1.导入额外的包
 - commons-fileupload-1.2.2.jar
 - commons-io-2.4.jar
-2. 在springmvc.xml中配置文件解析器
+2.在springmvc.xml中配置文件解析器
 
 ```
 <!--文件长传的解析器  -->
@@ -61,14 +64,14 @@ title: springmvc文件上传、异常处理器
 		<property name="maxUploadSize" value="500000"></property>
 	</bean>
 ```
-3. 表格使用post提交方式，并修改enctype属性
+3.表格使用post提交方式，并修改enctype属性
 
-```java
+```
 <form id="itemForm"	
     action="${pageContext.request.contextPath }/updateitem.action" method="post
 		enctype="multipart/form-data">
 ```
-4. 书写测试代码
+4.书写测试代码
 
 ```java
 //更新一个商品
