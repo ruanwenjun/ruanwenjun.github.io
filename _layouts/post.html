@@ -7,3 +7,18 @@ layout: default
 	<time class="published" style="margin-left: 42%;" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time>
   {{ content }}
 </article>
+<div id="gitmentContainer"></div>
+
+<script type="text/javascript">
+var gitalk = new Gitalk({
+  clientID: '136c2221a8840eae1930',
+  clientSecret: '5a24ff78d8e1ef8d0df2a0b9b7d91a7f389f9c8e',
+  repo: 'ruanwenjun.github.io',
+  owner: 'ruanwenjun',
+  admin: ['ruanwenjun'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>

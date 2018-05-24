@@ -38,9 +38,12 @@ title: Home
 	<p>CSDN：<a href="https://blog.csdn.net/ruanwenjun_csdn">ruanwenjun_csdn</a>(已经废弃)</p>
 	<p>LeetCode：<a href="https://leetcode-cn.com/ruanwenjun/">ruanwenjun</a>(刷到何时才能找到工作 - -！！！ )</p>
 	<p>Github：<a href="https://github.com/ruanwenjun">ruanwenjun</a>(菜鸟需要鼓励和关心)</p>
-
+	
 	<p>你竟然看完了，牛逼！</p>
+	<p style="color: #e0115f">有什么想对我说的就在下面给我留言吧！！！不过前提是你得有一个Github账号</p>
+
 </div>
+<div id="gitalk-container"></div>
 
 <script type="text/javascript">
 	$.fn.autoPlay=function(){
@@ -62,5 +65,17 @@ title: Home
 	},30)
 }
 $("#autoPlay").autoPlay();
+
+var gitalk = new Gitalk({
+  clientID: '136c2221a8840eae1930',
+  clientSecret: '5a24ff78d8e1ef8d0df2a0b9b7d91a7f389f9c8e',
+  repo: 'ruanwenjun.github.io',
+  owner: 'ruanwenjun',
+  admin: ['ruanwenjun'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
 	
 </script>
