@@ -43,7 +43,7 @@ title: Home
 	<p style="color: #e0115f">有什么想对我说的就在下面给我留言吧！！！不过前提是你得有一个Github账号</p>
 
 </div>
-<div id="container"></div>
+<div id="gitalk-container"></div>
 
 <script type="text/javascript">
 	$.fn.autoPlay=function(){
@@ -65,20 +65,18 @@ title: Home
 	},30)
 }
 $("#autoPlay").autoPlay();
+
+var gitalk = new Gitalk({
+  clientID: '0d9b3c9dcd509d1c9ab1',
+  clientSecret: '65a61813a1471e2e850fa5c18facf1899c0e8c08',
+  repo: 'ruanwenjun.github.io',
+  owner: 'ruanwenjun',
+  admin: ['ruanwenjun'],
+  id: 'about',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
 </script>
 
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: 'about', // 可选。默认为 location.href
-  owner: 'ruanwenjun',
-  repo: 'ruanwenjun.github.io',
-  oauth: {
-    client_id: '0d9b3c9dcd509d1c9ab1',
-    client_secret: '65a61813a1471e2e850fa5c18facf1899c0e8c08',
-  },
-})
-gitment.render('container')
-</script>
 	
