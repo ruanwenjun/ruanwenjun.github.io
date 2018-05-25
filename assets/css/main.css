@@ -33,6 +33,12 @@ blockquote {
   border-left: 2px solid #C6C6C6;
 }
 
+h2, h3, h4, h5, h6{
+	font-family: "Open Sans","DejaVu Sans",sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #ba3925;
+}
 
 ul, ol {
   margin-left: 40px;
