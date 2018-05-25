@@ -8,7 +8,7 @@ title: Mybatis的初步学习
 * [SQL语句映射文件](#sql语句映射文件)
 * [作用域和生命周期](#作用域和生命周期)
 
-# Mybatis是一款优秀的持久层框架
+ Mybatis是一款优秀的持久层框架
 
 要使用Mybatis需要一个mubatis-x.x.x.jar包，当然还有一些依赖包，例如数据库驱动，日志处理等
 。
@@ -16,8 +16,8 @@ title: Mybatis的初步学习
 ---
 ## 入门案例：
 
-1. 在Ecplise中创建一个JAVA工程，导入mybatis包和mysql连接驱动包。
-2. 编写jdbc.properties数据库连接配置文件
+1.在Ecplise中创建一个JAVA工程，导入mybatis包和mysql连接驱动包。
+2.编写jdbc.properties数据库连接配置文件
 
 ```java
 jdbc.driver=com.mysql.jdbc.Driver
@@ -26,8 +26,8 @@ jdbc.username=root
 jdbc.password=317287
 ```
 
-3. 数据库建表，建一个user表，同时在项目中创建一个User实体类
-4. 编写主配置文件
+3.数据库建表，建一个user表，同时在项目中创建一个User实体类
+4.编写主配置文件
 
 ```java
 <!DOCTYPE configuration
@@ -56,7 +56,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 </configuration>
 ```
 
-5. log4j日志记录文件 log4.properties
+5.log4j日志记录文件 log4.properties
 
 ```java
 # Global logging configuration
@@ -68,7 +68,7 @@ log4j.appender.stdout.layout.ConversionPattern=%5p [%t] - %m%n
 
 ```
 
-6. sql语句映射文件
+6.sql语句映射文件
 
 ```java
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -92,7 +92,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </mapper>
 ```
 
-7. 测试代码
+7.测试代码
 
 ```java
 public class Demo {
@@ -120,7 +120,8 @@ public class Demo {
 
 ## SqlSessionFactory
 SqlSessionFactory是Mybatis中十分重要的工厂，是一个接口，有两个实现类，每一个基于Mybatis的应用都要依靠SqlSessionFactory,可以从以下方式来构建SqlSessionFactory。
-1. 从XML配置文件中构建（文档上描述建议将该资源文件放在类路径下，即src下）
+
+1.从XML配置文件中构建（文档上描述建议将该资源文件放在类路径下，即src下）
 
 ```java
 String resource = "SqlMapConfig.xml";
@@ -128,7 +129,7 @@ InputStream inputStream= Resources.getResourceAsStream(resource);//Resources类�
 SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 ```
 
-2. 通过创建Configuration来构建SqlSessionFactory（不推荐使用）
+2.通过创建Configuration来构建SqlSessionFactory（不推荐使用）
 
 ```java
 DataSource dataSource = BlogDataSourceFactory.getBlogDataSource();//这里是得到一个数据库连接池，具体代码没有给出
@@ -139,6 +140,7 @@ configuration.addMapper(BlogMapper.class);
 SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
 ```
 ## sqlSession
+
 也是一个接口，有两个实现类
 ```java
 SqlSession session = sqlSessionFactory.openSession();  //这里得到的是sqlSession的两种实现类
@@ -149,7 +151,7 @@ SqlSession包含执行sql命令的方法，还有事务的回滚、提交。
 里面还有一个重要的方法getMapper(Class clazz);
 现在文档上面似乎是推荐使用mapper来使用
 
-# SQL语句映射文件
+## SQL语句映射文件
 
 ```java
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -169,7 +171,7 @@ SqlSession包含执行sql命令的方法，还有事务的回滚、提交。
 3. resultType:写为方法的返回值类型
 4. parameterType:参数类型
 
-# 作用域和生命周期
+## 作用域和生命周期
 - SqlSessionFactoryBuilder 建议定义为局部方法变量
 - SqlSessionFactory 建议一个应用只存在一个，使用单利模式或静态单例模式
 - SqlSession 每次请求都应该打开一个新的session,因为sqlsession是线程不安全的，因此不能被共享。每次收到HTTP请求就应该打开一个Session,返回一个响应就应该关闭它。即可以放在类似ThredLocal作用域中。
