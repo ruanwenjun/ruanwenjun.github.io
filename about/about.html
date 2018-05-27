@@ -12,6 +12,14 @@ title: Home
 
 	<p>热爱技术，正在努力学习JAVA编程中，理想是成为多隆一样优秀、低调的程序员</p>
 
+	<h3 style="color: #e0115f">兴趣爱好</h3>
+
+	<p>- 热爱足球，并不会踢</p>
+	<p>- 喜欢Dota，很久没玩了</p>
+	<p>- 爱好看书，读研之后才开始的</p>
+	<p>- 还喜欢看各种综艺、韩剧、电影</p>
+	<p>当然身为程序员，最喜欢的还是写代码</P>
+
 	<h3 style="color: #e0115f">技能</h3>
 
 	<p>- 了解Mysql简单的CURD</p>
@@ -26,7 +34,7 @@ title: Home
 	<p>- 知道Linux是一个操作系统的名字，而并不是一种编程语言</p>
 	<p>- 知道JVM的GC是一个很复杂的过程</p>
 	<p>- 知道懂nginx、zookeper、dubbo、分布式、高并发、负载均衡等一系列的技能都是很牛逼的</p>
-	<p>- 能够在看完《Java编程思想》、《深入理解Java虚拟机》、《Head First 设计模式》、《Java特种兵》、《图解TCP/IP》、《鸟哥的Linux私房菜》、《Spring实战》、《深入分析JavaWeb技术内幕》、《算法第4版》等一系列神书之后成功地没有记住一个字</p>	
+	<p>- 能够在看完《Java编程思想》、《深入理解Java虚拟机》、《Head First 设计模式》、《Java特种兵》、《图解TCP/IP》、《鸟哥的Linux私房菜》、《Spring实战》、《深入分析JavaWeb技术内幕》、《算法第4版》等一系列神书之后成功地没有记住一个字</p>
 	<h3 style="color: #e0115f">项目经历</h3>
 
 	<p>在大三的时候成功书写第一条Hello World,运行过程中出现死循环导致电脑死机，以一人之力成功将电脑重新开机。此项目耗时30minutes</p>
@@ -38,7 +46,7 @@ title: Home
 	<p>CSDN：<a href="https://blog.csdn.net/ruanwenjun_csdn">ruanwenjun_csdn</a>(已经废弃)</p>
 	<p>LeetCode：<a href="https://leetcode-cn.com/ruanwenjun/">ruanwenjun</a>(刷到何时才能找到工作 - -！！！ )</p>
 	<p>Github：<a href="https://github.com/ruanwenjun">ruanwenjun</a>(菜鸟需要鼓励和关心)</p>
-	
+
 	<p>你竟然看完了，牛逼！</p>
 	<p style="color: #e0115f">有什么想对我说的就在下面给我留言吧！！！不过前提是你得有一个Github账号</p>
 
@@ -51,8 +59,8 @@ title: Home
 	var str=$text.html();
 	var index=0;
 	var timer=setInterval(function(){
-		var current=str.substr(index,1);						//截取从index开始的一个字符      
-		if (current=='<') {											
+		var current=str.substr(index,1);						//截取从index开始的一个字符
+		if (current=='<') {
 			index=str.indexOf('>',index)+1;						//indexOf 返回'>'首次出现的位置  并且从index处开始检索
 		}else{
 			index++;											//index每70ms加一
@@ -61,7 +69,7 @@ title: Home
 		if(index >= str.length){
 			clearInterval(timer);
 		}
-		
+
 	},30)
 }
 $("#autoPlay").autoPlay();
@@ -78,5 +86,3 @@ var gitalk = new Gitalk({
 
 gitalk.render('gitalk-container')
 </script>
-
-	
