@@ -1,6 +1,7 @@
 ---
 layout: post
 title: springmvc文件上传、异常处理器
+tags: [Spring]
 ---
 * [图片长传](#图片长传)
 * [异常处理器](#异常处理器)
@@ -59,7 +60,7 @@ title: springmvc文件上传、异常处理器
 ```
 <!--文件长传的解析器  -->
     <!--这里的ID好像不能更改-->
-	<bean id="multipartResolver" 
+	<bean id="multipartResolver"
 	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="500000"></property>
 	</bean>
@@ -67,7 +68,7 @@ title: springmvc文件上传、异常处理器
 3.表格使用post提交方式，并修改enctype属性
 
 ```
-<form id="itemForm"	
+<form id="itemForm"
     action="${pageContext.request.contextPath }/updateitem.action" method="post
 		enctype="multipart/form-data">
 ```
@@ -87,12 +88,12 @@ public ModelAndView itemUpdate(Items item,MultipartFile pictureFile)
 	//将文件复制到电脑
 	pictureFile.transferTo(new File("E:\\ecplices _workspace\\"
 	    +"simplework\\ssm\\upload\\"+name));
-	    
+
 	item.setPic(name);
 	is.itemUpdate(item);
 	ModelAndView mav = new ModelAndView();
 	mav.setViewName("success");
-	return mav; 
+	return mav;
 }
 ```
 
@@ -138,7 +139,7 @@ public class CustomeException implements HandlerExceptionResolver{
 	public ModelAndView resolveException(HttpServletRequest request,
 	HttpServletResponse response, Object handler,
 			Exception ex) {
-		
+
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("error", ex.getMessage());
 		mav.setViewName("error");
@@ -155,4 +156,3 @@ public class CustomeException implements HandlerExceptionResolver{
 class="cn.ruanwenjun.exception.CustomeException"/>
 ```
 测试通过
-

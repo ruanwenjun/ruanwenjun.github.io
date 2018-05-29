@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Java代码编译优化
+tags: [深入理解Java虚拟机读书笔记]
 ---
 目录：
 - [javac编译器](#javac编译器)
@@ -137,5 +138,3 @@ HotSpot内置两个即时编译器，Client Compiler、Server Compiler简称C1�
 通常采用基于计数器的热点探测。
 
 计数器分为：方法调用计数器、回边计数器
-
-

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mybatis-generator生成器初步学习
+tags: [Mybatis]
 ---
 mybatis-generator是Mybatis的一款生成代码的工具，利用他可以自动将数据库中的表生成对应的实体model,接口mapper和sqlmapper,免去开发过程中的一些重复而繁杂的工作。
 # 在Ecplise中使用
@@ -13,14 +14,14 @@ mybatis-generator是Mybatis的一款生成代码的工具，利用他可以自�
 
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE generatorConfiguration 
-PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" 
+<!DOCTYPE generatorConfiguration
+PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
 	<!--targetRuntime是 指定值，具体看文档，id随意指定，不重复即可 -->
   <context id="DB2Tables" targetRuntime="MyBatis3">
-  
+
   	<commentGenerator>
 		<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
 		<property name="suppressAllComments" value="true" />
@@ -116,7 +117,7 @@ import cn.ruanwenjun.mapper.UserMapper;
 public class Demo {
 	@Test
 	public void testGenerator() {
-		
+
 		String source = "SqlMapConfig.xml";
 		InputStream in = null;
 		try {
@@ -140,19 +141,3 @@ public class Demo {
 
 ---
 关于Example还有许多用法，涵盖了基本的根据ID进行CURD还有添加条件等，功能十分强大，不过如果需要关联查询可能还是需要取mapper里面自己书写SQL语句
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

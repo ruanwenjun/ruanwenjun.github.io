@@ -1,6 +1,7 @@
 ---
 layout: post
 title: TCP/IP的初步学习!
+tags: [TCP/IP]
 ---
 * [协议的内容](#协议的内容)
 * [发送过程](#发送过程)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ActiveMQ入门学习
+tags: [其他]
 ---
 
 目录：

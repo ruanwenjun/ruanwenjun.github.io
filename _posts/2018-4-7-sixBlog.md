@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring简单整合Mybatis
+tags: [Spring]
 ---
 * [导包](#导包)
 * [spring配置文件](#spring配置文件)
@@ -25,22 +26,22 @@ applicationContext.xml
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-4.0.xsd
-	http://www.springframework.org/schema/aop 
-	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
-	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
-	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util
 	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
-	
+
 	<!--读取配置jdbc连接的信息文件-->
 	<context:property-placeholder location="classpath:dbcp.properties"/>
 	<!--采用dbcp连接池-->
@@ -63,7 +64,7 @@ applicationContext.xml
 		<property name="mapperInterface" value="cn.ruanwenjun.mapper.UserMapper"/>
 	</bean> -->
 	<!--使用扫描的方式来扫描包下的所有接口-->
-	<bean id="mapperScannerConfigure" 
+	<bean id="mapperScannerConfigure"
 		class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 	    <!--这里不要配置sqlSessionFactory，会报错，
 	    	因为在该类下的注入sqlSessionFactory的方法已经过期了，可以配置一个
@@ -139,7 +140,7 @@ import java.util.Date;
 
 public class User implements Serializable {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private Integer id;
@@ -216,6 +217,3 @@ public class Demo {
 输出正常
 
 ---
-
-
-

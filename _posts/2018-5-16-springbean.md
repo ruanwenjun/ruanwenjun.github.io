@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring----Bean的装配
+tags: [Spring]
 ---
 目录：
 * [隐式的Bean发现机制和自动装配](#隐式的bean发现机制和自动装配)
@@ -15,7 +16,7 @@ Spring装配Bean的三种方式
 
 - 隐式的Bean发现机制和自动装配(首选)
 - 基于Java的显示装配
-- 使用XML进行显示装配 
+- 使用XML进行显示装配
 
 ## 隐式的Bean发现机制和自动装配
 
@@ -138,7 +139,7 @@ public class App {
 
 打印：Boy{gril=Gril{name='TangYan', age=10}}
 ```
-## 使用XML进行显示装配 
+## 使用XML进行显示装配
 
 ```java
 
@@ -147,7 +148,7 @@ public class App {
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    
+
     <bean id="boy" class="com.spring.beandemo.Boy">
         <property name="gril" ref="gril"/>
     </bean>

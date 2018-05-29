@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Springmvc入门学习一
+tags: [Spring]
 ---
 目录：
 - [架构：](#架构：)
@@ -27,9 +28,9 @@ SpringMVC基于模型-视图-控制器模式实现，能够构建松耦合的Web
 前端控制器可以通过JAVA代码来实现，通过编写一个类继承AbstractAnnotationConfigDispatcherServletInitiaLizer来实现，也可以通过在web.xml来配置，这里选择在web.xml配置。
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://java.sun.com/xml/ns/javaee"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
          http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
 
@@ -110,7 +111,7 @@ SpringMVC基于模型-视图-控制器模式实现，能够构建松耦合的Web
  */
 @Controller
 public class HomeController {
-    
+
     @Autowired
     private SpittleDao spittleDao;
 
@@ -149,7 +150,7 @@ public class HomeController {
 (5) 书写Dao
 
  这一步同样也是不需要的，但是在本案例简单的书写，实现业务处理。这本来是应该对应数据库操作的，但是本案例没有进行数据库的操作
- 
+
  ```java
  /**
  * @Author RUANWENJUN
@@ -171,7 +172,7 @@ public interface SpittleDao {
     Spittle findSpittleById(long spittleId);
 }
 ```
- 
+
  ```java
  /**
  * @Author RUANWENJUN
@@ -310,10 +311,3 @@ public class Spittle {
 
 ---
 需要注意的有参数接收、表单接收、资源文件映射、视图转发重定向等
-
-
-
-
-
-
-

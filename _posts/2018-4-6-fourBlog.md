@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mybatis的初步学习
+tags: [Mybatis]
 ---
 * [入门案例](#入门案例)
 * [SqlSessionFactory](#sqlsessionfactory)
@@ -107,7 +108,7 @@ public class Demo {
 			SqlSession session = ssf.openSession();
 			User user = session.selectOne("test.findUserById", 1);
 			System.out.println(user);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -158,7 +159,7 @@ SqlSession包含执行sql命令的方法，还有事务的回滚、提交。
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
+
 <mapper namespace="cn.ruanwenjun.dao.UserMapper">
     <select id="selectUserByUsername" resultType="cn.ruanwenjun.domain.User" parameterType="string">
 		select * from user where username = #{v}

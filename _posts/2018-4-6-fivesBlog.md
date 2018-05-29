@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 单例模式
+tags: [大话设计模式读书笔记]
 ---
 目录
 * [问题引出](#问题引出)
@@ -54,7 +55,7 @@ public class SF{
     public static SF sf = new SF();
     //将构造器定义为私有保证外部不能实例化该类
     private SF(){}
-    
+
 }
 ```
 这样就可以直接通过SF.sf来得到影魔对象
