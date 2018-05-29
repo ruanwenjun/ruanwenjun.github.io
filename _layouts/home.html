@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 
+{% for category in site.tags %}
+<a href="/category.html#{{ category | first }}">{{category | first}}</a>({{ categry | last | size}})
+{% endfor %}
+
 <section class="archive">
 {% for post in paginator.posts %}
 {% unless post.next %}

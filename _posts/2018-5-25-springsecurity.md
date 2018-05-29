@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring Security
+tags: [Spring]
 ---
 目录：
 - [Hello World](#hello world)
@@ -53,9 +54,9 @@ Spring Security是一款安全框架，能够在web请求级别和方法调用�
 <b:beans xmlns="http://www.springframework.org/schema/security"
          xmlns:b="http://www.springframework.org/schema/beans"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/security 
+		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
     <http/>
     <user-service>
@@ -108,5 +109,3 @@ Spring Security是一款安全框架，能够在web请求级别和方法调用�
 ---
 
 [参考资料一](https://springcloud.cc/spring-security-zhcn.html#release-numbering)
-
-

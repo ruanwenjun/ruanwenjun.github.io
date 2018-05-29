@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring JDBC学习
+tags: [Spring]
 ---
 目录：
 - [Hello World](#helloworld)
