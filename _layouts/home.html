@@ -2,11 +2,6 @@
 layout: default
 title: Home
 ---
-<div style="margin-bottom:10px;">
-  {% for category in site.tags %}
-  <a href="/category.html#{{ category | first }}">{{category | first}}</a>({{ category | last | size}})
-  {% endfor %}
-</div>
 <section class="archive">
 {% for post in paginator.posts %}
 {% unless post.next %}
