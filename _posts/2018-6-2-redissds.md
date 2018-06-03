@@ -12,7 +12,7 @@ tags: [Redis]
 
 ## Redis的定义
 
-```
+```c
 struct sdshdr{
     // 记录buf数组中已使用的字节数量
     // 等于SDS所保存字符串长度
