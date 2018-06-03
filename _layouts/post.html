@@ -2,11 +2,17 @@
 layout: default
 ---
 
+
 <article class="single row gutters">
     <h1 style="text-align: center;">{{ page.title }}</h1>
 	<time class="published" style="margin-left: 42%;" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time>
+  {% for category in page.tags %}
+    <a href="http://ruanwenjun.top/category.html#{{ category | first }}">&raquo;{{ category | first}}</a>
+  {% endfor %}
+
   {{ content }}
 </article>
+
 <div id="gitalk-container"></div>
 
 <script type="text/javascript">
