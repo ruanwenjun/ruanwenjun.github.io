@@ -6,14 +6,14 @@
         (function() {
           var hm = document.createElement("script");
           hm.src = "https://hm.baidu.com/hm.js?c1b59fdd06598101f6a058d92fe41554";
-          var s = document.getElementsByTagName("script")[0]; 
+          var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    
+
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    
+
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     {% include head.html %}
   </head>
@@ -30,20 +30,20 @@
         </div>
 
         {% include navigation.html %}
-       
+
       </header>
 
       {{ content }}
-		
+
       <footer>
-      	 
+
         <a href="https://weibo.com/u/2885734002">
       		  <img src="/images/weibo.png" style="width: 40px;height: 40px;"/>
     	  </a>
         <a href="http://music.163.com/m/playlist?id=566105598&userid=398548615">
             <img src="/images/music.png" style="width: 40px;height: 40px;"/>
         </a>
-         <a href="mailto:ruanwenjun@csu.edu.cn">
+         <a href="mailto:bestruanwenjun@gmail.com">
             <img src="/images/mail.png" style="width: 40px;height: 40px;"/>
         </a>
         <a href="https://github.com/ruanwenjun">
@@ -56,19 +56,19 @@
             <img src="/images/qq.png" style="width: 40px;height: 40px;cursor: pointer;" />
         </a>
 
-  			  {% include baidu-anaylysis.html %} 
-          <div>总访问次数次<font id="busuanzi_value_site_pv"></font></div> 
+  			  {% include baidu-anaylysis.html %}
+          <div>总访问次数次<font id="busuanzi_value_site_pv"></font></div>
         <p>
           This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/deed.en_US">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
         </p>
       </footer>
     </main>
-	
+
     <!-- scripts -->
     <script src="{{ '/assets/js/fluidvids.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/jquery-1.8.0.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/layer/layer.js' | relative_url }}"></script>
-    
+
 
     <script>
       fluidvids.init({
@@ -99,12 +99,12 @@
 				  shadeClose: true,
 				  content: ' <img style="width:300px;"src="/images/qqcode.jpg"/>',
 				  offset: '150px'
-	      		
+
 	    	});
   		});
 
-	 
-      
+
+
     </script>
   </body>
 </html>
