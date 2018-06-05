@@ -18,7 +18,7 @@ tags: [Spring]
 静态代理实现过程比较简单，就是代理类和被代理类实现同一接口，代理内部保存有被带理对象的具体实例，外部通过访问代理对象访问被带理对象。
 
 动态代理是指为指定接口在运行期间动态的生成代理对象。动态代理的实现主要由Proxy类和InvocationHandler接口负责
-```
+```java
 /**
  * Request接口
  *
@@ -94,7 +94,7 @@ cglib可以为没有实现接口的类进行代理。要使用cglib代理需要�
 - cglib-3.2.6.jar
 - asm-all-6.0_BETA.jar
 
-```
+```java
 /**
  * @Author RUANWENJUN
  * @Creat 2018-06-05 20:09
