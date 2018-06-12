@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Redis持久化
-tags: [Redis]
+title: 线程间的协作
+tags: [Java线程]
 ---
 
 目录：
