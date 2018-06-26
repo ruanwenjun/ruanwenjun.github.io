@@ -76,13 +76,19 @@ tags: [深入理解Java虚拟机读书笔记]
 
 ## 垃圾收集器
 
+![image](https://ruanwenjun.github.io/images/memory/gc.png)
+
 (1) Serial收集器
+
+![image](https://ruanwenjun.github.io/images/memory/Serial.png)
 
 Serial收集器是一个单线程收集器，它在进行垃圾回收的时候必须暂停所有其他工作线程，直到它收集结束为止。虚拟机在Client模式下默认新生代收集器就是Serial收集器。
 
 优点：简单高效
 
 (2) ParNew收集器
+
+![image](https://ruanwenjun.github.io/images/memory/parnew.png)
 
 ParNew是Serial收集器的多线程版本，是许多虚拟机运行在Server模式下首选的新生代收集器
 
