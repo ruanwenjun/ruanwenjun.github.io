@@ -5,7 +5,7 @@ title: Home
 <head>
 	<script   src="https://code.jquery.com/jquery-3.1.0.js"></script>
 </head>
-<div id="autoPlay" style="overflow: auto;min-height: 1500px;">
+<div >
 	<p>我是Ruan Wenjun,本科就读于<a href="http://www.hubu.edu.cn/">湖北大学</a>生命科学学院生物技术专业，大一的时候曾经手刃小白鼠，后来不忍继续杀生，于是转行学习CS</p>
 
 	<p>现就读于<a href="http://www.csu.edu.cn/">中南大学</a>信息科学学院计算机技术专业</p>
@@ -54,25 +54,6 @@ title: Home
 <div id="gitalk-container"></div>
 
 <script type="text/javascript">
-	$.fn.autoPlay=function(){
-	var $text=$(this);
-	var str=$text.html();
-	var index=0;
-	var timer=setInterval(function(){
-		var current=str.substr(index,1);						//截取从index开始的一个字符
-		if (current=='<') {
-			index=str.indexOf('>',index)+1;						//indexOf 返回'>'首次出现的位置  并且从index处开始检索
-		}else{
-			index++;											//index每70ms加一
-		}
-		$text.html(str.substring(0,index)+(index & 1 ?'_':''));	//substring 截取0到index的字符
-		if(index >= str.length){
-			clearInterval(timer);
-		}
-
-	},30)
-}
-$("#autoPlay").autoPlay();
 
 var gitalk = new Gitalk({
   clientID: '0d9b3c9dcd509d1c9ab1',
