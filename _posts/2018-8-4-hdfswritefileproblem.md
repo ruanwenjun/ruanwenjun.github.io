@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HDFS写入文件是防止已存在
+title: HDFS写入文件时防止已存在
 tags: [HDFS]
 ---
 
@@ -8,7 +8,7 @@ tags: [HDFS]
 
 ## 解决方案一：代码层面
 
-```
+```java
 
 val conf = new Configuration()
 val HDFSFileSystem = FileSystem.get(conf)
