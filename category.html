@@ -2,6 +2,7 @@
 layout: default
 title: Category
 ---
+	<div class="archive-item fadeInDown animated">
     {% for category in site.tags %}
       <a href="#{{ category | first }}">{{ category | first}}</a>({{ category | last | size}})
     {% endfor %}
@@ -15,3 +16,4 @@ title: Category
         {% endfor %}
       </ul>
     {% endfor %}
+	</div>
