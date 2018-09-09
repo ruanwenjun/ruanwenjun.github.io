@@ -14,7 +14,7 @@ tags: [深入理解Java虚拟机读书笔记]
 
 Java虚拟机在运行时通常可以把管理的内存分为方法区、虚拟机栈、本地方法栈、堆、程序计数器这五大区域。
 
-![image](https://ruanwenjun.github.io/images/memory/jvmmemory.png)
+![image](https://ruanwenjun.github.io/images/2018-06-19/jvmmemory.png)
 
 ## 程序计数器
 程序计数器可以看作当前线程执行的字节码的行号指示器，通过程序计数器可以知道执行的下一条指令是什么。每个线程都需要有自己的程序计数器，并且各个线程的计数器之间互不干扰。因此程序计数器是线程私有的。

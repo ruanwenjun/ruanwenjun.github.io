@@ -11,7 +11,7 @@ SpringMVC基于模型-视图-控制器模式实现，能够构建松耦合的Web
 
 ## 架构：
 
-![image](https://ruanwenjun.github.io/images/springmvc/springmvcjiagou.png)
+![image](https://ruanwenjun.github.io/images/2018-05-21/springmvcjiagou.png)
 
 **DispatcherServlet**：前端控制器，是SpringMVC的核心组件，它的任务是查询一个或多个处理器映射器，来确定将请求发送给哪个控制器。
 

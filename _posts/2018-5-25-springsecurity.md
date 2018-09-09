@@ -66,11 +66,11 @@ Spring Security是一款安全框架，能够在web请求级别和方法调用�
 ```
 至此，一个最基本的spring security框架已经配置完成，启动服务器会自动跳转到login页面，这个页面是框架自动生成的
 
-![image](https://ruanwenjun.github.io/images/springsecurity/login.png)
+![image](https://ruanwenjun.github.io/images/2018-05-25/login.png)
 
 必须使用上面配置文件中的user,password才能登陆。由于配置了springmvc，登陆成功后会跳转到index.jsp
 
-![image](https://ruanwenjun.github.io/images/springsecurity/index.png)
+![image](https://ruanwenjun.github.io/images/2018-05-25/index.png)
 
 页面代码如下，向其中加入一个logout 按钮可以实现登出
 
@@ -104,7 +104,7 @@ Spring Security是一款安全框架，能够在web请求级别和方法调用�
 </body>
 </html>
 ```
-![image](https://ruanwenjun.github.io/images/springsecurity/logout.png)
+![image](https://ruanwenjun.github.io/images/2018-05-25/logout.png)
 
 ---
 
