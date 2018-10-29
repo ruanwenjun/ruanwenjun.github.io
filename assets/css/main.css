@@ -55,6 +55,7 @@ a {
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-size: .8rem;
+  line-height: 20px;
 }
 
 p code {
@@ -292,7 +293,7 @@ footer {
 }
 
 .highlight code {
-  font-size: .7rem;
+  font-size: .8rem;
 }
 
 /*
