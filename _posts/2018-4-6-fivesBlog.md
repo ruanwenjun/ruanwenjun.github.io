@@ -100,7 +100,22 @@ public class SF{
     }
 }
 ```
-这是我觉得比较优秀的方案。
+这是我觉得比较优秀的方案，但是据说实用过程中并不推荐。
+- 采用内部类的方式
+
+```java
+public class SF{
+	private SF(){}
+	private static class SFHolder{
+		private static instance = new SF();
+	}
+	
+	public static SF getInstance(){
+		return SFHolder.instance;
+	}
+}
+```
+这种方式与第一种方式类似，但是避免了类加载的时候就初始化，而是在第一次使用的时候(调用getInstance方法的时候)进行初始化
 
 **缺点**：需要JAVA5以上
 
