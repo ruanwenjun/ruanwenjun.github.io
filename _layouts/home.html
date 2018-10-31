@@ -44,7 +44,8 @@ title: Home
 {% endunless %}
 
  <article>
-   <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>
+   <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>&raquo;
+   <a href="http://ruanwenjun.top/category.html#{{ page.tags }}">{{ page.tags }}</a>
    <div class="post-date">
      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: " %m月%-d日" }}</time>
    </div>
