@@ -47,7 +47,7 @@ title: Home
 	<div style="flex-grow:1">
 		<a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>
 		&raquo;
-		<a style="color:#bd8ea0" href="http://ruanwenjun.top/category.html#{{ post.tags }}">{{ post.tags }}</a>
+		<a style="color:#bd8ea0; font-size:10px;" href="http://ruanwenjun.top/category.html#{{ post.tags }}">{{ post.tags }}</a>
 	</div>
    <div class="post-date">
      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: " %m月%-d日" }}</time>
