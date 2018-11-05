@@ -17,7 +17,7 @@ HashMap是用来存储键值对的一种数据结构，每个Key对应一个Valu
 
 直接上代码
 
-```
+```java
 import java.util.HashMap;
 
 /**
@@ -39,7 +39,7 @@ public class HashDemo {
 根据结果看，HashMap的Key可以为Null，而根据HashMap中Key的唯一性（不知道这么说准不准确），可以得出HashMap中可以存在唯一的null key。
 
 至于为什么，通过观察源码可以发现，
-```
+```java
  public V put(K key, V value) {
         return putVal(hash(key), key, value, false, true);
 }
@@ -56,7 +56,7 @@ HashMap里面定义了一个hash（key）方法，当Key为null时，Hash值为0
 ## HashMap中value能否为null
 依然直接上代码
 
-```
+```java
 import java.util.HashMap;
 
 /**
@@ -85,7 +85,7 @@ public class HashDemo {
 ## HashTable中的Key和Value能否为null
 
 上代码
-```
+```java
 import java.util.HashMap;
 import java.util.Hashtable;
 
@@ -109,7 +109,7 @@ Exception in thread "main" java.lang.NullPointerException
 
 ```
 结构表明，HashTable中的Key不能为null，查看put源码如下：
-```
+```java
 public synchronized V put(K key, V value) {
     // Make sure the value is not null
     if (value == null) {
@@ -139,7 +139,7 @@ public synchronized V put(K key, V value) {
 ## ConcurrentHashMap里的Key和Value能否为null
 
 上代码
-```
+```java
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -162,7 +162,7 @@ Exception in thread "main" java.lang.NullPointerException
 
 ```
 结果表明，ConcurrentHashMap的Key并不能为null,查看put方法源码：
-```
+```java
 public V put(K key, V value) {
     return putVal(key, value, false);
 }
