@@ -39,6 +39,11 @@ Pipeline:处理resultItem
 
 ## 爬取百度贴吧实战
 
+
+![代码](https://github.com/ruanwenjun/webmagic-demo)
+
+
+
 包结构
 ![image](https://ruanwenjun.github.io/images/2018-11-11/package.jpg)
 
