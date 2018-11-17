@@ -40,7 +40,7 @@ Pipeline:处理resultItem
 ## 爬取百度贴吧实战
 
 
-![代码](https://github.com/ruanwenjun/webmagic-demo)
+[代码](https://github.com/ruanwenjun/webmagic-demo)
 
 
 
