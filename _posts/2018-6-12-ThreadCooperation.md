@@ -83,7 +83,17 @@ public final void join() throws InterruptedException {
 
 ## 条件变量Condition
 Condition接口可作为wait/notify的替代品，它为解决过早唤醒提供了支持，可以通过任意锁的Lock.newCondition来创建一个Condition实例。Condition实例被称为条件变量。每个Condition实例内部维护一个用于存储该条件等待线程的队列，所以唤醒的时候只会从该条件的队列中唤醒。
+其ConditionObject内部是通过一个链表来存放当前阻塞的线程队列
 
+```java
+/** First node of condition queue. */
+private transient Node firstWaiter;
+/** Last node of condition queue. */
+private transient Node lastWaiter;
+```
+
+
+Condition的使用
 ```java
 private final Lock lock = new ReentrantLock();
 private final Condition condition = lock.newCondition();
@@ -116,6 +126,72 @@ public void notifyMethod(){
 
 ## CountDownLatch
 CountDownLatch可以用来实现一个或多个线程等待其他线程完成一组特定的操作之后才继续运行，即使用wait和join只能实现一个线程等待另一个线程，而CountDownLatch可以实现等待多个线程。另外CountDownLatch是一次性的，一个CountDownLatch实例只能实现一次等待。并且使用的时候不需要加锁。
+```java
+ExecutorService pool =  Executors.newFixedThreadPool(2);
 
+CountDownLatch countDownLatch = new CountDownLatch(2);
+pool.submit(()->{
+    System.out.println(Thread.currentThread().getName() + "开始工作");
+    try {
+        Thread.sleep(2000);
+        System.out.println(Thread.currentThread().getName() + "工作结束");
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    countDownLatch.countDown();
+});
+pool.submit(()->{
+    System.out.println(Thread.currentThread().getName() + "开始工作");
+    try {
+        Thread.sleep(2000);
+        System.out.println(Thread.currentThread().getName() + "工作结束");
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    countDownLatch.countDown();
+});
+System.out.println(Thread.currentThread().getName() + "main等待");
+countDownLatch.await();
+System.out.println(Thread.currentThread().getName() + "main结束");
+pool.shutdown();
+```
+CountDownLatch内部是通过AQS队列实现的，使用state来存放当前的数字，如果当前的state不等于0就把当前线程park并加入到队列中。当state为0的时候就唤醒队列中所有的线程。
+同时CountDownLatch自线程调用countDown不会阻塞，而下面的CyclicBarrier子线程调用await会阻塞
 ## CycliBarrier
 与CountDownLatch不同的是CycliBarrier可以重复使用。
+```java
+private static ExecutorService pool =  Executors.newFixedThreadPool(2);
+
+public static void main(String[] args) throws InterruptedException {
+    CyclicBarrier cyclicBarrier = new CyclicBarrier(2, () -> {
+        System.out.println(Thread.currentThread() + "main finish");
+    });
+    try {
+        run(cyclicBarrier);
+    }finally {
+        pool.shutdown();
+    }
+}
+
+private static void run(CyclicBarrier cyclicBarrier) {
+    pool.submit(()->{
+        task(cyclicBarrier);
+    });
+    pool.submit(()->{
+        task(cyclicBarrier);
+    });
+}
+
+private static void task(CyclicBarrier cyclicBarrier) {
+    System.out.println(Thread.currentThread() + "work begin");
+    try {
+        cyclicBarrier.await();
+    } catch (InterruptedException | BrokenBarrierException e) {
+        e.printStackTrace();
+    }
+    System.out.println(Thread.currentThread() + "work finish");
+}
+```
+同时，CyclicBarrier构造的时候可以加入一个回调函数，当工作完了会被回调。
+CyclicBarrier内部是通过一个ReentrantLock和Condition来实现的
+
