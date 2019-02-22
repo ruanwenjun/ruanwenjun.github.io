@@ -34,8 +34,11 @@ Tomcat启动是通过BootStrap的main方法启动的。BootStrap会加载Catalin
 
 Catalina会构造Digester对象，加载配置文件,然后通过Server对象启动，Server主要用于提供容器start，close方法。
 
-Server对象中包含Service数组,service启动会调用Engine启动,调用mapperListener启动，调用Connector启动。
-Service用于连接Context和Connector,一个Context可以有多个Connector，一个Connector只能属于一个Context.
+Server对象中包含Service数组,,service启动会调用Engine启动,调用mapperListener启动，调用Connector启动。
+
+Service用于连接Context和Connector,一个Service里面有一个Engine和一个Connector数组，表示了一个Engine对应多个Connector.
+
+Connector里面有Adapter（CoyoteAdapter）和protocolHandler，protocolHandler里面最后可以找到endpoint（这是具体使用socket进行请求的接受的地方，里面有accepter和poller）
 
 ## 思考
 在Tomcat中经常可以看到copy on write模式的使用，就是在多个线程操作数组的时候，当对数组修改的时候，复制一份，修改复制的那一份，修改完了在将修改的数组引用赋值给原数组。

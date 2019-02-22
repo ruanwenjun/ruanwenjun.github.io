@@ -90,7 +90,7 @@ I want to send a request !!!!
 
 ## cglib代理
 
-cglib可以为没有实现接口的类进行代理。要使用cglib代理需要导入第三方包
+cglib可以为没有实现接口的类进行代理,底层似乎是通过ASM动态修改字节码技术实现的。要使用cglib代理需要导入第三方包
 - cglib-3.2.6.jar
 - asm-all-6.0_BETA.jar
 
@@ -144,6 +144,6 @@ Hello, I am CGLIB
 Hello, I want to send a response. Time isTue Jun 05 20:42:49 CST 2018
 ```
 
-cglib缺点是不能对final方法进行覆写。
+由于cglib是动态创建子类的方式实现代理，所以缺点是不能对final或private方法进行代理。
 
-SpringAOP默认使用动态代理实现，当一个类没有实现接口的时候，会使用cglib代理。
+SpringAOP默认使用动态代理实现，当一个类没有实现接口的时候，会使用cglib代理。Cglib代理所创建的对象性能比jdk动态代理性能高，但是创建时花费的时间也要长。
