@@ -1,7 +1,7 @@
 ---
 layout: post
 title: topK问题
-tags: [算法与数据结构]
+tags: [数据结构与算法]
 ---
 
 - [无序数组中找topK问题](#无序数组中找topK问题)
