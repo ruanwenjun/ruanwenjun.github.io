@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71b112c2-35e9-48ad-9856-2eb6fceacfed" name="Default Changelist" comment="add wait">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2019-4-5-strangeNum.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-4-5-strangeNum.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/about.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,9 +37,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2019-4-5-strangeNum.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="597">
-                <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="674">
+                <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
               </first_editor>
               <second_editor />
             </state>
@@ -185,12 +183,12 @@
       <workItem from="1553327835241" duration="793000" />
       <workItem from="1553525743269" duration="618000" />
       <workItem from="1554467695913" duration="2132000" />
-      <workItem from="1554619673890" duration="1633000" />
+      <workItem from="1554619673890" duration="1882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27806000" />
+    <option name="totallyTimeSpent" value="28055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="951" extended-state="0" />
@@ -418,9 +416,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2019-4-5-strangeNum.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="597">
-            <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="674">
+            <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
           </first_editor>
           <second_editor />
         </state>

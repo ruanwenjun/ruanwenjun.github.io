@@ -35,7 +35,7 @@ System.out.println(d2.hashCode());
 ```
 果不其然，他俩的hashCode是不一样的，进一步，发现他俩的equals返回也是false,通过源码发现Double的equals和hashCode实现上都调用了同一个方法。
 
-至于为什么要让0.0和-0.0的hashCode不一样，现在还不知道。这点在Float中也存在这种情况。
+~~至于为什么要让0.0和-0.0的hashCode不一样，现在还不知道~~。这点在Float中也存在这种情况。
 
 同时还发现，Double是没有缓存对象的。Integer默认是缓存-128到127之前的值。
 ```java
