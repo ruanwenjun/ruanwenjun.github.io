@@ -49,3 +49,37 @@ System.out.println(i1 == i2);
 false
 true
 ```
+2019-4-7补充：关于equals方法和hashCode方法梳理
+
+通常有个约定：当你重写equals方法之后，必须要重写hashCode方法。
+
+equals方法是什么：equals方法是Object的一个方法,主要用来实现判断两个对象是否逻辑上”相等”.
+
+默认实现是:判断两个对象是否是同一个对象
+```java
+public boolean equals(Object obj) {
+    return (this == obj);
+}
+```
+
+hashCode方法是什么：hashCode方法也是Object的一个方法，主要用于一些hash集合当中，例如HashMap,HashSet等.
+
+默认实现是:
+```java
+public native int hashCode();
+```
+ 
+通常我们重写了equals方法的时候，需要重写hashCode方法，使得hashCode方法与equals方法保持一致。
+
+主要是为了保证：
+- if(a.equals(b) == true) then a.hashCode() == b.hashCode()。
+- if(a.equals(b) == false) then a.hashCode() != b.hashCode()。
+
+如果违反上述两条会出现以下两个问题
+
+- 当两个对象equals一致的时候，如果他俩hashCode不一致，那么把这两个对象放到hash桶里，他们极大可能就不在一个桶（当然有可能会映射到同一个桶），当他们不在同一个桶的时候，那么这个时候就有问题了，比如：Set,这个时候就有个两个逻辑上相等的对象，就不符合Set的定义
+- 当两个对象equals不一致的时候，他俩的hashCode方法如果一致了，那么这个时候也会有一点小问题，就是他俩必然会打到同一个桶了，这样不就增加了冲突了吗
+所以，hashCode需要配合equals来实现，如果equals返回true，那么hashCode<a>必须</a>要返回一致，如果equals返回false,hashCode<a>最好</a>也要返回false。
+
+所以0.0 和-0.0这两个equals返回false了，他们的hashCode自然也要返回不一致。
+
