@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 迷宫炸墙与迪杰斯特拉算法
-tags: [算法与数据结构]
+tags: [数据结构与算法]
 ---
 目录：
 - [问题描述](#问题描述)
@@ -40,8 +40,8 @@ public int findMinTime(int[][] path){
 	Set<Integer> set = new HashSet<>();
 	set.add(start);
 	while(start.size() < end){
-		int minTime = Integer.MIN_VALUE;
-		int minPoint = -1;
+		int minTime = Integer.MAX_VALUE;
+		int minPoint = 0;
 		for(Integer index : set){
 			if(index%path[0].length > 0 && !set.contains(index - 1) && path[index - 1][index] < minTime){
 				minPoint = index - 1;
@@ -60,6 +60,7 @@ public int findMinTime(int[][] path){
 				minTime = path[index][index + path[0].length];
 			}
 		}
+		set.add(minPoint);
 		// 更新路径
 		for(int i = 0; i < path.length; i ++){
         	if(path[0][i] < path[0][minPoint] + path[minPoint][i]){
