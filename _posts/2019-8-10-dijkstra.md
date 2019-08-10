@@ -68,7 +68,7 @@ public int findMinTime(int[][] path){
         	}
 		}
 	}
-	return path[start][end];
+	return path[start][end - 1];
 }
 
 ```
