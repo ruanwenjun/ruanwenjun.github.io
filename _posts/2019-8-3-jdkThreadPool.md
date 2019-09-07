@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 关于JDK线程池非核心线程池如何死亡
+title: 关于JDK线程池非核心线程如何死亡
 tags: [jdk]
 ---
 目录：
