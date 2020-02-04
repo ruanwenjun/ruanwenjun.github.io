@@ -11,7 +11,7 @@ tags: [数据结构与算法]
 # 问题描述
 
 今天偶然想看看自己的博客，于是像往常一样打开书签，发现出现错误，进不去博客。
-![image](https://ruanwenjun.github.io/images/2020-01-15/image.png)
+![image](https://ruanwenjun.github.io/images/2020-01-15/image1.png)
 如图所示，意思是不认识ruanwenjun.top这个域名，请检查该域名是否被添加到了服务。
 
 一开始以为是不是域名到期了，毕竟当时域名只租了一年，于是到阿里云上检查，发现域名还没有到期呀。难道我的域名被封了？？
