@@ -75,7 +75,7 @@ title: Home
     {% elsif page == 1 %}
       <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
     {% else %}
-      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      <a >{{ page }}</a>
     {% endif %}
   {% endfor %}
 
